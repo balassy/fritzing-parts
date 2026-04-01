@@ -14,7 +14,7 @@ jobs:
     if: github.event_name == 'push'
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Ensure zip is installed
         run: |
@@ -35,7 +35,7 @@ jobs:
           echo "FZPZ_PATH=$out" >> $GITHUB_ENV
 
       - name: Upload build artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v7
         with:
           name: '${{ env.FZPZ_PATH }}'
           path: '${{ env.FZPZ_PATH }}'
@@ -45,7 +45,7 @@ jobs:
     if: github.event_name == 'release'
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Ensure zip is installed
         run: |
