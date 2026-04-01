@@ -28,23 +28,17 @@ jobs:
           part_path: 'ZS-042 Real Time Clock Module - 4 pin only/part.zs-042-4-pin-only.fzp'
 
       - name: Create fzpz archive
-        run: |
-          set -e
-          PART_DIR='ZS-042 Real Time Clock Module - 4 pin only'
-          VERSION='${{ steps.determine-version.outputs.version }}'
-          OUT="$PART_DIR-v${VERSION}.fzpz"
-          rm -f "$OUT"
-          pushd "$PART_DIR"
-          zip -0 -r "../$OUT" .
-          popd
-          ls -l "$OUT"
-          echo "FZPZ_PATH=$OUT" >> $GITHUB_ENV
+        id: create-part-package
+        uses: ./.github/actions/fritzing-create-part-package
+        with:
+          part_dir: 'ZS-042 Real Time Clock Module - 4 pin only'
+          version: '${{ steps.determine-version.outputs.version }}'
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v7
         with:
-          name: '${{ env.FZPZ_PATH }}'
-          path: '${{ env.FZPZ_PATH }}'
+          name: '${{ steps.create-part-package.outputs.fzpz_path }}'
+          path: '${{ steps.create-part-package.outputs.fzpz_path }}'
           archive: false
 
   release:
@@ -66,22 +60,16 @@ jobs:
           part_path: 'ZS-042 Real Time Clock Module - 4 pin only/part.zs-042-4-pin-only.fzp'
 
       - name: Create fzpz archive for release
-        run: |
-          set -e
-          PART_DIR='ZS-042 Real Time Clock Module - 4 pin only'
-          VERSION='${{ steps.determine-version.outputs.version }}'
-          OUT="$PART_DIR-v${VERSION}.fzpz"
-          rm -f "$OUT"
-          pushd "$PART_DIR"
-          zip -0 -r "../$OUT" .
-          popd
-          ls -l "$OUT"
-          echo "FZPZ_PATH=$OUT" >> $GITHUB_ENV
+        id: create-part-package
+        uses: ./.github/actions/fritzing-create-part-package
+        with:
+          part_dir: 'ZS-042 Real Time Clock Module - 4 pin only'
+          version: '${{ steps.determine-version.outputs.version }}'
 
       - name: Upload release asset
         uses: actions/upload-release-asset@v1
         with:
           upload_url: ${{ github.event.release.upload_url }}
-          asset_path: '${{ env.FZPZ_PATH }}'
-          asset_name: '${{ env.FZPZ_PATH }}'
+          asset_path: '${{ steps.create-part-package.outputs.fzpz_path }}'
+          asset_name: '${{ steps.create-part-package.outputs.fzpz_path }}'
           asset_content_type: application/zip
