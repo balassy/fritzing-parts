@@ -39,6 +39,7 @@ jobs:
         with:
           name: '${{ env.FZPZ_PATH }}'
           path: '${{ env.FZPZ_PATH }}'
+          archive: false
 
   release:
     runs-on: ubuntu-latest
