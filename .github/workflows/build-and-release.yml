@@ -21,20 +21,26 @@ jobs:
           sudo apt-get update -y
           sudo apt-get install -y zip
 
+      - name: Determine part version
+        run: |
+          set -e
+          PART_DIR='ZS-042 Real Time Clock Module - 4 pin only'
+          VERSION_FILE="$PART_DIR/part.zs-042-4-pin-only.fzp"
+          VERSION=$(grep -oP '(?<=<version>)[^<]+' "$VERSION_FILE" | head -n 1)
+          [ -n "$VERSION" ] || { echo "version not found" >&2; exit 1; }
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+
       - name: Create fzpz archive
         run: |
           set -e
-          part_dir='ZS-042 Real Time Clock Module - 4 pin only'
-          version_file="$part_dir/part.zs-042-4-pin-only.fzp"
-          version=$(grep -oP '(?<=<version>)[^<]+' "$version_file" | head -n 1)
-          [ -n "$version" ] || { echo "version not found" >&2; exit 1; }
-          out="$part_dir-v$version.fzpz"
-          rm -f "$out"
-          pushd "$part_dir"
-          zip -0 -r "../$out" .
+          PART_DIR='ZS-042 Real Time Clock Module - 4 pin only'
+          OUT="$PART_DIR-v${VERSION}.fzpz"
+          rm -f "$OUT"
+          pushd "$PART_DIR"
+          zip -0 -r "../$OUT" .
           popd
-          ls -l "$out"
-          echo "FZPZ_PATH=$out" >> $GITHUB_ENV
+          ls -l "$OUT"
+          echo "FZPZ_PATH=$OUT" >> $GITHUB_ENV
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v7
@@ -55,20 +61,26 @@ jobs:
           sudo apt-get update -y
           sudo apt-get install -y zip
 
+      - name: Determine part version
+        run: |
+          set -e
+          PART_DIR='ZS-042 Real Time Clock Module - 4 pin only'
+          VERSION_FILE="$PART_DIR/part.zs-042-4-pin-only.fzp"
+          VERSION=$(grep -oP '(?<=<version>)[^<]+' "$VERSION_FILE" | head -n 1)
+          [ -n "$VERSION" ] || { echo "version not found" >&2; exit 1; }
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+
       - name: Create fzpz archive for release
         run: |
           set -e
-          part_dir='ZS-042 Real Time Clock Module - 4 pin only'
-          version_file="$part_dir/part.zs-042-4-pin-only.fzp"
-          version=$(grep -oP '(?<=<version>)[^<]+' "$version_file" | head -n 1)
-          [ -n "$version" ] || { echo "version not found" >&2; exit 1; }
-          out="$part_dir-v$version.fzpz"
-          rm -f "$out"
-          pushd "$part_dir"
-          zip -0 -r "../$out" .
+          PART_DIR='ZS-042 Real Time Clock Module - 4 pin only'
+          OUT="$PART_DIR-v${VERSION}.fzpz"
+          rm -f "$OUT"
+          pushd "$PART_DIR"
+          zip -0 -r "../$OUT" .
           popd
-          ls -l "$out"
-          echo "FZPZ_PATH=$out" >> $GITHUB_ENV
+          ls -l "$OUT"
+          echo "FZPZ_PATH=$OUT" >> $GITHUB_ENV
 
       - name: Upload release asset
         uses: actions/upload-release-asset@v1
