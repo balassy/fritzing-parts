@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<module moduleId="zs-042-4-pin-only" fritzingVersion="1.0.6">
+ <version>6</version>
+ <title>ZS-042 Real Time Clock Module</title>
+ <description>A simplified, 4-pin only version of the ZS-042 RTC module based on the DS3231 chip.</description>
+ <author>Gyorgy Balassy</author>
+ <url>https://github.com/balassy/fritzing-parts</url>
+ <label>ZS-042</label>
+ <date>2026-04-01</date>
+ <tags>
+  <tag>ZS-042</tag>
+  <tag>HW-084</tag>
+  <tag>DS3231</tag>
+  <tag>RTC Module</tag>
+ </tags>
+ <properties>
+  <property name="pins">4</property>
+  <property name="variant">ZS-042-4-pin-only</property>
+  <property name="layer"></property>
+  <property name="part number"></property>
+  <property name="family">Real Time Clock Module</property>
+ </properties>
+ <taxonomy>part.dip.10.pins</taxonomy>
+ <description></description>
+ <views>
+  <iconView>
+   <layers image="icon/zs-042-4-pin-only_icon.svg">
+    <layer layerId="icon"/>
+   </layers>
+  </iconView>
+  <breadboardView>
+   <layers image="breadboard/zs-042-4-pin-only_breadboard.svg">
+    <layer layerId="breadboard"/>
+   </layers>
+  </breadboardView>
+  <schematicView>
+   <layers image="schematic/zs-042-4-pin-only_schematic.svg">
+    <layer layerId="schematic"/>
+   </layers>
+  </schematicView>
+  <pcbView>
+   <layers image="pcb/zs-042-4-pin-only_pcb.svg">
+    <layer layerId="silkscreen"/>
+    <layer layerId="copper0"/>
+    <layer layerId="copper1"/>
+   </layers>
+  </pcbView>
+ </views>
+ <connectors>
+  <connector id="gnd-connector" name="GND" type="male">
+   <description>GND pin</description>
+   <views>
+    <breadboardView>
+     <p svgId="gnd-pin" terminalId="gnd-terminal" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="gnd-pin" terminalId="gnd-terminal" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="gnd-pin" layer="copper0"/>
+     <p svgId="gnd-pin" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="vcc-connector" name="VCC" type="male">
+   <description>VCC pin</description>
+   <views>
+    <breadboardView>
+     <p svgId="vcc-pin" terminalId="vcc-terminal" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="vcc-pin" terminalId="vcc-terminal" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="vcc-pin" layer="copper0"/>
+     <p svgId="vcc-pin" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="sda-connector" name="SDA" type="male">
+   <description>SDA pin</description>
+   <views>
+    <breadboardView>
+     <p svgId="sda-pin" terminalId="sda-terminal" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="sda-pin" terminalId="sda-terminal" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="sda-pin" layer="copper0"/>
+     <p svgId="sda-pin" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="scl-connector" name="SCL" type="male">
+   <description>SCL pin</description>
+   <views>
+    <breadboardView>
+     <p svgId="scl-pin" terminalId="scl-terminal" layer="breadboard"/>
+    </breadboardView>
+    <schematicView>
+     <p svgId="scl-pin" terminalId="scl-terminal" layer="schematic"/>
+    </schematicView>
+    <pcbView>
+     <p svgId="scl-pin" layer="copper0"/>
+     <p svgId="scl-pin" layer="copper1"/>
+    </pcbView>
+   </views>
+  </connector>
+ </connectors>
+</module>

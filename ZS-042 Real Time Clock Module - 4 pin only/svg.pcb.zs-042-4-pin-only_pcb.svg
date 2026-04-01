@@ -1,0 +1,16 @@
+<svg id="svg21" width="1.5061in" height=".87611in" enable-background="new 0 0 107.72 62.36" gorn="0" version="1.1" viewBox="0 0 108.44 63.08" xmlns="http://www.w3.org/2000/svg">
+ <g id="copper1">
+  <g id="copper0" fill="none" stroke="#ffbf0c" stroke-width="1.44">
+    <circle id="gnd-pin" transform="scale(-1)" cx="-104.72" cy="-20.966" r="2.088" gorn="0.3.0.0.0.0.0.0.0.0.0.0"/>
+    <circle id="vcc-pin" transform="scale(-1)" cx="-104.72" cy="-28.166" r="2.088" gorn="0.3.0.0.0.0.0.1.0.0.0.0"/>
+    <circle id="sda-pin" transform="scale(-1)" cx="-104.72" cy="-35.33" r="2.088" gorn="0.3.0.0.0.0.0.2.0.0.0.0"/>
+    <circle id="scl-pin" transform="scale(-1)" cx="-104.72" cy="-42.53" r="2.088" gorn="0.3.0.0.0.0.0.3.0.0.0.0"/>
+  </g>
+ </g>
+ <g id="silkscreen" fill="none" stroke="#000">
+  <path id="frame" d="m102.96 0.36024h-97.23v0.005998c-2.311 1.125-4.196 2.922-5.375 5.125v51.871c1.125 2.303 2.918 4.182 5.116 5.358h97.308c2.275-1.127 4.133-2.906 5.297-5.084v-51.92c-1.126-2.302-2.918-4.18-5.116-5.356z"/>
+  <path id="screwhole-bottom-right" d="m97.895 59.834c-1.691 0-3.063-1.371-3.063-3.063s1.371-3.063 3.063-3.063 3.063 1.371 3.063 3.063-1.372 3.063-3.063 3.063z"/>
+  <path id="screwhole-top-left" d="m24.386 9.7662c-1.691 0-3.063-1.371-3.063-3.063s1.371-3.063 3.063-3.063 3.063 1.371 3.063 3.063-1.371 3.063-3.063 3.063z"/>
+  <path id="screwhole-bottom-left" d="m24.386 59.839c-1.691 0-3.063-1.371-3.063-3.063s1.371-3.063 3.063-3.063 3.063 1.371 3.063 3.063-1.371 3.063-3.063 3.063z"/>
+ </g>
+</svg>
