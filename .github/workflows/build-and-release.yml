@@ -30,7 +30,9 @@ jobs:
           [ -n "$version" ] || { echo "version not found" >&2; exit 1; }
           out="$part_dir-v$version.fzpz"
           rm -f "$out"
-          zip -0 -r "$out" "$part_dir"
+          pushd "$part_dir"
+          zip -0 -r "../$out" .
+          popd
           ls -l "$out"
           echo "FZPZ_PATH=$out" >> $GITHUB_ENV
 
@@ -62,7 +64,9 @@ jobs:
           [ -n "$version" ] || { echo "version not found" >&2; exit 1; }
           out="$part_dir-v$version.fzpz"
           rm -f "$out"
-          zip -0 -r "$out" "$part_dir"
+          pushd "$part_dir"
+          zip -0 -r "../$out" .
+          popd
           ls -l "$out"
           echo "FZPZ_PATH=$out" >> $GITHUB_ENV
 
