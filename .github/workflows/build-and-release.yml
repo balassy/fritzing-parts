@@ -22,18 +22,16 @@ jobs:
           sudo apt-get install -y zip
 
       - name: Determine part version
-        run: |
-          set -e
-          PART_DIR='ZS-042 Real Time Clock Module - 4 pin only'
-          VERSION_FILE="$PART_DIR/part.zs-042-4-pin-only.fzp"
-          VERSION=$(grep -oP '(?<=<version>)[^<]+' "$VERSION_FILE" | head -n 1)
-          [ -n "$VERSION" ] || { echo "version not found" >&2; exit 1; }
-          echo "VERSION=$VERSION" >> $GITHUB_ENV
+        id: determine-version
+        uses: ./.github/actions/fritzing-determine-version
+        with:
+          part_path: 'ZS-042 Real Time Clock Module - 4 pin only/part.zs-042-4-pin-only.fzp'
 
       - name: Create fzpz archive
         run: |
           set -e
           PART_DIR='ZS-042 Real Time Clock Module - 4 pin only'
+          VERSION='${{ steps.determine-version.outputs.version }}'
           OUT="$PART_DIR-v${VERSION}.fzpz"
           rm -f "$OUT"
           pushd "$PART_DIR"
@@ -62,18 +60,16 @@ jobs:
           sudo apt-get install -y zip
 
       - name: Determine part version
-        run: |
-          set -e
-          PART_DIR='ZS-042 Real Time Clock Module - 4 pin only'
-          VERSION_FILE="$PART_DIR/part.zs-042-4-pin-only.fzp"
-          VERSION=$(grep -oP '(?<=<version>)[^<]+' "$VERSION_FILE" | head -n 1)
-          [ -n "$VERSION" ] || { echo "version not found" >&2; exit 1; }
-          echo "VERSION=$VERSION" >> $GITHUB_ENV
+        id: determine-version
+        uses: ./.github/actions/fritzing-determine-version
+        with:
+          part_path: 'ZS-042 Real Time Clock Module - 4 pin only/part.zs-042-4-pin-only.fzp'
 
       - name: Create fzpz archive for release
         run: |
           set -e
           PART_DIR='ZS-042 Real Time Clock Module - 4 pin only'
+          VERSION='${{ steps.determine-version.outputs.version }}'
           OUT="$PART_DIR-v${VERSION}.fzpz"
           rm -f "$OUT"
           pushd "$PART_DIR"
