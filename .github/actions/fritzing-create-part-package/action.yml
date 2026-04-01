@@ -10,6 +10,7 @@ inputs:
 outputs:
   fzpz_path:
     description: 'Generated .fzpz artifact path'
+    value: ${{ steps.create.outputs.fzpz_path }}
 runs:
   using: "composite"
   steps:
