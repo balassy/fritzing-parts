@@ -1,0 +1,74 @@
+name: Build and Release Fritzing part package
+
+on:
+  push:
+    branches:
+      - main
+  release:
+    types:
+      - published
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Ensure zip is installed
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y zip
+
+      - name: Create fzpz archive
+        run: |
+          set -e
+          part_dir='ZS-042 Real Time Clock Module - 4 pin only'
+          version_file="$part_dir/part.zs-042-4-pin-only.fzp"
+          version=$(grep -oP '(?<=<version>)[^<]+' "$version_file" | head -n 1)
+          [ -n "$version" ] || { echo "version not found" >&2; exit 1; }
+          out="$part_dir-v$version.fzpz"
+          rm -f "$out"
+          zip -0 -r "$out" "$part_dir"
+          ls -l "$out"
+          echo "FZPZ_PATH=$out" >> $GITHUB_ENV
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: '${{ env.FZPZ_PATH }}'
+          path: '${{ env.FZPZ_PATH }}'
+
+  release:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'release'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Ensure zip is installed
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y zip
+
+      - name: Create fzpz archive for release
+        run: |
+          set -e
+          part_dir='ZS-042 Real Time Clock Module - 4 pin only'
+          version_file="$part_dir/part.zs-042-4-pin-only.fzp"
+          version=$(grep -oP '(?<=<version>)[^<]+' "$version_file" | head -n 1)
+          [ -n "$version" ] || { echo "version not found" >&2; exit 1; }
+          out="$part_dir-v$version.fzpz"
+          rm -f "$out"
+          zip -0 -r "$out" "$part_dir"
+          ls -l "$out"
+          echo "FZPZ_PATH=$out" >> $GITHUB_ENV
+
+      - name: Upload release asset
+        uses: actions/upload-release-asset@v1
+        with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: '${{ env.FZPZ_PATH }}'
+          asset_name: '${{ env.FZPZ_PATH }}'
+          asset_content_type: application/zip
