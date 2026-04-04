@@ -21,18 +21,12 @@ jobs:
           sudo apt-get update -y
           sudo apt-get install -y zip
 
-      - name: Determine part version
-        id: determine-version
-        uses: ./.github/actions/fritzing-determine-version
-        with:
-          part_path: 'ZS-042 Real Time Clock Module - 4 pin only/part.zs-042-4-pin-only.fzp'
-
       - name: Create fzpz archive
         id: create-part-package
         uses: ./.github/actions/fritzing-create-part-package
         with:
-          part_dir: 'ZS-042 Real Time Clock Module - 4 pin only'
-          version: '${{ steps.determine-version.outputs.version }}'
+          part_folder_path: 'ZS-042 Real Time Clock Module - 4 pin only'
+          path_file_path: 'ZS-042 Real Time Clock Module - 4 pin only/part.zs-042-4-pin-only.fzp'
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v7
@@ -53,18 +47,12 @@ jobs:
           sudo apt-get update -y
           sudo apt-get install -y zip
 
-      - name: Determine part version
-        id: determine-version
-        uses: ./.github/actions/fritzing-determine-version
-        with:
-          part_path: 'ZS-042 Real Time Clock Module - 4 pin only/part.zs-042-4-pin-only.fzp'
-
       - name: Create fzpz archive for release
         id: create-part-package
         uses: ./.github/actions/fritzing-create-part-package
         with:
-          part_dir: 'ZS-042 Real Time Clock Module - 4 pin only'
-          version: '${{ steps.determine-version.outputs.version }}'
+          part_folder_path: 'ZS-042 Real Time Clock Module - 4 pin only'
+          path_file_path: 'ZS-042 Real Time Clock Module - 4 pin only/part.zs-042-4-pin-only.fzp'
 
       - name: Upload release asset
         uses: actions/upload-release-asset@v1

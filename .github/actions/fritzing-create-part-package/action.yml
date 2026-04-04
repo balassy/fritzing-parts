@@ -1,11 +1,11 @@
 name: Create Fritzing part package
-description: Create a .fzpz archive from part folder and version
+description: Create a .fzpz archive from part folder and version extracted from the part file
 inputs:
-  part_dir:
+  part_folder_path:
     description: 'Path to the part folder'
     required: true
-  version:
-    description: 'Version string to append'
+  path_file_path:
+    description: 'Path to the .fzp file used to extract version'
     required: true
 outputs:
   fzpz_path:
@@ -19,9 +19,11 @@ runs:
       shell: bash
       run: |
         set -e
-        OUT_FILE="${{ inputs.part_dir }}-v${{ inputs.version }}.fzpz"
+        VERSION=$(grep -oP '(?<=<version>)[^<]+' "${{ inputs.path_file_path }}" | head -n 1)
+        [ -n "$VERSION" ] || { echo "version not found" >&2; exit 1; }
+        OUT_FILE="${{ inputs.part_folder_path }}-v$VERSION.fzpz"
         rm -f "$OUT_FILE"
-        pushd "${{ inputs.part_dir }}"
+        pushd "${{ inputs.part_folder_path }}"
         zip -0 -r "../$OUT_FILE" .
         popd
         ls -l "$OUT_FILE"
