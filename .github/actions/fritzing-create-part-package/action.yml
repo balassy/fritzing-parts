@@ -19,10 +19,16 @@ runs:
       shell: bash
       run: |
         set -e
+        set -x
+        echo "--- PART_FOLDER_PATH=${{ inputs.part_folder_path }}"
+        echo "--- PATH_FILE_PATH=${{ inputs.path_file_path }}"
         VERSION=$(grep -oP '(?<=<version>)[^<]+' "${{ inputs.path_file_path }}" | head -n 1)
-        [ -n "$VERSION" ] || { echo "version not found" >&2; exit 1; }
+        echo "--- Extracted version: $VERSION"
+        [ -n "$VERSION" ] || { echo "--- ERROR: Version not found!" >&2; exit 1; }
         OUT_FILE="${{ inputs.part_folder_path }}-v$VERSION.fzpz"
+        echo "--- Output archive: $OUT_FILE"
         rm -f "$OUT_FILE"
+        echo "--- Creating archive from folder ${ { inputs.part_folder_path }}"
         pushd "${{ inputs.part_folder_path }}"
         zip -0 -r "../$OUT_FILE" .
         popd
