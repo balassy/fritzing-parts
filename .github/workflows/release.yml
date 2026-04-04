@@ -1,9 +1,6 @@
-name: Build and Release Fritzing part package
+name: Release Fritzing part package
 
 on:
-  push:
-    branches:
-      - main
   release:
     types:
       - published
@@ -12,35 +9,8 @@ permissions:
   contents: write
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    if: github.event_name == 'push'
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v6
-
-      - name: Ensure zip is installed
-        run: |
-          sudo apt-get update -y
-          sudo apt-get install -y zip
-
-      - name: Create fzpz archive
-        id: create-part-package
-        uses: ./.github/actions/fritzing-create-part-package
-        with:
-          part_folder_path: 'ZS-042 Real Time Clock Module - 4 pin only'
-          path_file_path: 'ZS-042 Real Time Clock Module - 4 pin only/part.zs-042-4-pin-only.fzp'
-
-      - name: Upload build artifact
-        uses: actions/upload-artifact@v7
-        with:
-          name: '${{ steps.create-part-package.outputs.fzpz_path }}'
-          path: '${{ steps.create-part-package.outputs.fzpz_path }}'
-          archive: false
-
   release:
     runs-on: ubuntu-latest
-    if: github.event_name == 'release'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
