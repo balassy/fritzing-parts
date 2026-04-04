@@ -38,6 +38,20 @@ Official guide: https://fritzing.org/learning/tutorials/creating-custom-parts
 - To save the SVG without Inkscape specific content in the Save As dialog select `Optimized SVG (*.svg)` as the type. Even in this format you can use VS Code to nicely format the content. 
 - If the SVG contains a deep group hierarchy, instead of moving the objects from a deep location to a higher level always use Ungroup. This way transformations applied on the various group levels are resolved.
 
+## Build and release process
+
+This repository includes GitHub Actions workflows for packaging the Fritzing parts and publishing them as release assets.
+
+When a commit is pushed to the `main` branch the workflow in `build.yml` is executed. It builds the .fzpz files from the parts folders and attaches them as build artifacts.
+
+GitHub keeps build artifacts for 90 days.
+
+When a release is created the workflow in `release.yml` is started. It builds the .fzpz files from the parts folders and attaches them as release artifacts.
+
+The part packages are created with a reusable local action in the `./.github/actions/fritzing-create-part-package` folder. It first extracts the `module/version` attribute from the XML in the .fzp file and appends the version number to the artifact file, so it is **important to properly maintain the `version` attribute in the part file!**
+
+Read more about the FZP file format here: https://github.com/fritzing/fritzing-app/wiki/2.1-Part-file-format
+
 ## About the author
 
 This project is created and maintained by [György Balássy](https://www.linkedin.com/in/balassy).
