@@ -28,7 +28,7 @@ runs:
         OUT_FILE="${{ inputs.part_folder_path }}-v$VERSION.fzpz"
         echo "--- Output archive: $OUT_FILE"
         rm -f "$OUT_FILE"
-        echo "--- Creating archive from folder ${ { inputs.part_folder_path }}"
+        echo "--- Creating archive from folder ${{ inputs.part_folder_path }}"
         pushd "${{ inputs.part_folder_path }}"
         zip -0 -r "../$OUT_FILE" .
         popd
