@@ -20,8 +20,8 @@ jobs:
           sudo apt-get update -y
           sudo apt-get install -y zip
 
-      - name: Create fzpz archive for release
-        id: create-part-package
+      - name: Create fzpz archive for ZS-042
+        id: create-part-package-zs-042
         uses: ./.github/actions/fritzing-create-part-package
         with:
           part_folder_path: 'ZS-042 Real Time Clock Module - 4 pin only'
@@ -33,6 +33,23 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}        
         with:
           upload_url: ${{ github.event.release.upload_url }}
-          asset_path: '${{ steps.create-part-package.outputs.fzpz_path }}'
-          asset_name: '${{ steps.create-part-package.outputs.fzpz_path }}'
+          asset_path: '${{ steps.create-part-package-zs-042.outputs.fzpz_path }}'
+          asset_name: '${{ steps.create-part-package-zs-042.outputs.fzpz_path }}'
           asset_content_type: application/zip
+
+      - name: Create fzpz archive for ESP32-WROOM-32
+        id: create-part-package-esp32
+        uses: ./.github/actions/fritzing-create-part-package
+        with:
+          part_folder_path: 'ESP32-WROOM-32-simple-pcb'
+          path_file_path: 'ESP32-WROOM-32-simple-pcb/part.ESP32-WROOM-32-simple-pcb.fzp'
+
+      - name: Upload release asset for ESP32-WROOM-32
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}        
+        with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: '${{ steps.create-part-package-esp32.outputs.fzpz_path }}'
+          asset_name: '${{ steps.create-part-package-esp32.outputs.fzpz_path }}'
+          asset_content_type: application/zip          

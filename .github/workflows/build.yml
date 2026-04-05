@@ -17,16 +17,30 @@ jobs:
           sudo apt-get update -y
           sudo apt-get install -y zip
 
-      - name: Create fzpz archive
-        id: create-part-package
+      - name: Create fzpz archive for ZS-042
+        id: create-part-package-zs-042
         uses: ./.github/actions/fritzing-create-part-package
         with:
           part_folder_path: 'ZS-042 Real Time Clock Module - 4 pin only'
           path_file_path: 'ZS-042 Real Time Clock Module - 4 pin only/part.zs-042-4-pin-only.fzp'
 
-      - name: Upload build artifact
+      - name: Upload build artifact for ZS-042
         uses: actions/upload-artifact@v7
         with:
-          name: '${{ steps.create-part-package.outputs.fzpz_path }}'
-          path: '${{ steps.create-part-package.outputs.fzpz_path }}'
+          name: '${{ steps.create-part-package-zs-042.outputs.fzpz_path }}'
+          path: '${{ steps.create-part-package-zs-042.outputs.fzpz_path }}'
           archive: false
+
+      - name: Create fzpz archive for ESP32-WROOM-32
+        id: create-part-package-esp32 
+        uses: ./.github/actions/fritzing-create-part-package
+        with:
+          part_folder_path: 'ESP32-WROOM-32-simple-pcb'
+          path_file_path: 'ESP32-WROOM-32-simple-pcb/part.ESP32-WROOM-32-simple-pcb.fzp'
+
+      - name: Upload build artifact for ESP32-WROOM-32
+        uses: actions/upload-artifact@v7
+        with:
+          name: '${{ steps.create-part-package-esp32.outputs.fzpz_path }}'
+          path: '${{ steps.create-part-package-esp32.outputs.fzpz_path }}'
+          archive: false          

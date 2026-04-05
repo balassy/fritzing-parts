@@ -1,0 +1,165 @@
+<svg id="Layer_1" width=".90278in" height="1.8056in" enable-background="new 0 0 65 130" gorn="0" version="1.1" viewBox="0 0 65 130" xmlns="http://www.w3.org/2000/svg">
+ <desc id="desc1">
+  <referenceFile>LuaNode32_ESP32_Schema.svg</referenceFile>
+ </desc>
+ <g fill="#231f20" font-family="DroidSans" font-size="3.5px">
+  <g text-anchor="end">
+   <g id="text2" text-align="end" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" gorn="0.3">
+    <text id="tspan7780" x="55.907959" y="16.316401" gorn="0.3.0">D23</text>
+   </g>
+   <g id="text4" text-align="end" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" gorn="0.4">
+    <text id="tspan7778" x="55.907959" y="23.507799" gorn="0.4.0">D22</text>
+   </g>
+   <g id="text6" text-align="end" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" gorn="0.5">
+    <text id="tspan7776" x="55.625977" y="30.6992" gorn="0.5.0">TX0</text>
+   </g>
+   <g id="text8" text-align="end" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" gorn="0.6">
+    <text id="tspan7774" x="55.566162" y="37.890598" gorn="0.6.0">RX0</text>
+   </g>
+   <g id="text10" text-align="end" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" gorn="0.7">
+    <text id="tspan7772" x="55.907959" y="45.0811" gorn="0.7.0">D21</text>
+   </g>
+   <g id="text12" text-align="end" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" gorn="0.8">
+    <text id="tspan7770" x="55.907959" y="52.272499" gorn="0.8.0">D19</text>
+   </g>
+   <g id="text14" text-align="end" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" gorn="0.9">
+    <text id="tspan7768" x="55.907959" y="59.462898" gorn="0.9.0">D18</text>
+   </g>
+   <text id="text16" x="53.980225" y="66.654297" text-align="end" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" gorn="0.10">D5</text>
+   <g id="text18" text-align="end" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" gorn="0.11">
+    <text id="tspan7766" x="55.625977" y="73.845703" gorn="0.11.0">TX2</text>
+   </g>
+   <g id="text20" text-align="end" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" gorn="0.12">
+    <text id="tspan7764" x="55.566162" y="81.035202" gorn="0.12.0">RX2</text>
+   </g>
+   <g id="text22" text-align="end" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" gorn="0.13">
+    <text id="tspan7762" x="53.980225" y="88.226601" gorn="0.13.0">D4</text>
+   </g>
+   <g id="text24" text-align="end" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" gorn="0.14">
+    <text id="tspan7760" x="53.980225" y="95.417999" gorn="0.14.0">D2</text>
+   </g>
+   <g id="text26" text-align="end" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" gorn="0.15">
+    <text id="tspan7758" x="55.907959" y="102.6094" gorn="0.15.0">D15</text>
+   </g>
+   <text id="text28" x="57.141846" y="109.7988" text-align="end" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" gorn="0.16">GND</text>
+   <text id="text30" x="55.70459" y="116.9902" text-align="end" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" gorn="0.17">3V3</text>
+  </g>
+  <text id="text32" x="9.2734003" y="116.9902" gorn="0.18">Vin</text>
+  <text id="text34" x="9.2725" y="109.9199" gorn="0.19">GND</text>
+  <g>
+   <g id="text36" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" gorn="0.20">
+    <text id="tspan7756" x="9.2725" y="102.7266" gorn="0.20.0">D13</text>
+   </g>
+   <g id="text38" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" gorn="0.21">
+    <text id="tspan7754" x="9.2725" y="95.533203" gorn="0.21.0">D12</text>
+   </g>
+   <g id="text40" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" gorn="0.22">
+    <text id="tspan7752" x="9.2725" y="88.338898" gorn="0.22.0">D14</text>
+   </g>
+   <g id="text42" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" gorn="0.23">
+    <text id="tspan7750" x="9.2725" y="81.144501" gorn="0.23.0">D27</text>
+   </g>
+   <g id="text44" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" gorn="0.24">
+    <text id="tspan7748" x="9.2725" y="73.952103" gorn="0.24.0">D26</text>
+   </g>
+   <g id="text46" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" gorn="0.25">
+    <text id="tspan7746" x="9.2725" y="66.757797" gorn="0.25.0">D25</text>
+   </g>
+   <g id="text48" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" gorn="0.26">
+    <text id="tspan7744" x="9.2725" y="59.5625" gorn="0.26.0">D33</text>
+   </g>
+   <g id="text50" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" gorn="0.27">
+    <text id="tspan7742" x="9.2725" y="52.369099" gorn="0.27.0">D32</text>
+   </g>
+   <g id="text52" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" gorn="0.28">
+    <text id="tspan7740" x="9.2725" y="45.1758" gorn="0.28.0">D35</text>
+   </g>
+   <g id="text54" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" gorn="0.29">
+    <text id="tspan7738" x="9.2725" y="37.982399" gorn="0.29.0">D34</text>
+   </g>
+   <g id="text56" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" gorn="0.30">
+    <text id="tspan7736" x="9.2725" y="30.7871" gorn="0.30.0">VN</text>
+   </g>
+   <g id="text58" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" gorn="0.31">
+    <text id="tspan7734" x="9.2725" y="23.5938" gorn="0.31.0">VP</text>
+   </g>
+   <g id="text60" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" gorn="0.32">
+    <text id="tspan7732" x="9.2734003" y="16.316401" gorn="0.32.0">EN</text>
+   </g>
+  </g>
+ </g>
+ <g fill="none" stroke="#231f20" stroke-miterlimit="10">
+  <rect id="rect62" x="7.272" y="7.201" width="50.4" height="116.2" stroke-width=".7" gorn="0.33"/>
+  <g>
+   <line id="line64" x1=".001" x2="7.272" y1="15.386" y2="15.401" gorn="0.34"/>
+   <line id="line66" x1=".001" x2="7.272" y1="22.601" y2="22.617" gorn="0.35"/>
+   <line id="line68" x1=".001" x2="7.272" y1="29.801" y2="29.817" gorn="0.36"/>
+   <line id="line70" x1=".001" x2="7.272" y1="36.97" y2="36.986" gorn="0.37"/>
+   <line id="line72" x1=".001" x2="7.272" y1="44.186" y2="44.202" gorn="0.38"/>
+   <line id="line74" x1=".001" x2="7.272" y1="51.386" y2="51.401" gorn="0.39"/>
+   <line id="line76" x1=".001" x2="7.272" y1="58.586" y2="58.602" gorn="0.40"/>
+   <line id="line78" x1=".001" x2="7.272" y1="65.803" y2="65.817" gorn="0.41"/>
+   <line id="line80" x1=".001" x2="7.272" y1="73.002" y2="73.019" gorn="0.42"/>
+   <line id="line82" x1=".001" x2="7.272" y1="80.172" y2="80.187" gorn="0.43"/>
+   <line id="line84" x1=".001" x2="7.272" y1="87.388" y2="87.402" gorn="0.44"/>
+   <line id="line86" x1=".001" x2="7.272" y1="94.588" y2="94.603" gorn="0.45"/>
+   <line id="line88" x1=".001" x2="7.272" y1="101.86" y2="101.87" gorn="0.46"/>
+   <line id="line90" x1=".001" x2="7.272" y1="109.07" y2="109.09" gorn="0.47"/>
+   <line id="line92" x1=".001" x2="7.272" y1="116.27" y2="116.29" gorn="0.48"/>
+   <line id="line94" x1="57.602" x2="64.872" y1="15.439" y2="15.455" gorn="0.49"/>
+   <line id="line96" x1="57.602" x2="64.873" y1="22.655" y2="22.671" gorn="0.50"/>
+   <line id="line98" x1="57.602" x2="64.873" y1="29.855" y2="29.871" gorn="0.51"/>
+   <line id="line100" x1="57.602" x2="64.872" y1="37.024" y2="37.039" gorn="0.52"/>
+   <line id="line102" x1="57.602" x2="64.873" y1="44.24" y2="44.255" gorn="0.53"/>
+   <line id="line104" x1="57.602" x2="64.873" y1="51.439" y2="51.455" gorn="0.54"/>
+   <line id="line106" x1="57.602" x2="64.872" y1="58.64" y2="58.656" gorn="0.55"/>
+   <line id="line108" x1="57.602" x2="64.873" y1="65.855" y2="65.871" gorn="0.56"/>
+   <line id="line110" x1="57.602" x2="64.873" y1="73.057" y2="73.071" gorn="0.57"/>
+   <line id="line112" x1="57.602" x2="64.872" y1="80.226" y2="80.24" gorn="0.58"/>
+   <line id="line114" x1="57.602" x2="64.873" y1="87.44" y2="87.457" gorn="0.59"/>
+   <line id="line116" x1="57.602" x2="64.873" y1="94.642" y2="94.656" gorn="0.60"/>
+   <line id="line118" x1="57.602" x2="64.872" y1="101.91" y2="101.93" gorn="0.61"/>
+   <line id="line120" x1="57.602" x2="64.873" y1="109.13" y2="109.14" gorn="0.62"/>
+   <line id="line122" x1="57.602" x2="64.873" y1="116.33" y2="116.34" gorn="0.63"/>
+  </g>
+ </g>
+ <g id="text124" font-family="DroidSans" font-size="4.25px" text-align="center" text-anchor="middle" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" gorn="0.64">
+  <text id="tspan7730" x="32.455692" y="63.694622" gorn="0.64.1">ESP32</text>
+ </g>
+ <g fill="none" stroke="#231f20" stroke-miterlimit="10">
+  <g stroke-width=".32474">
+   <line id="connector0pin" x1=".0052565" x2=".7718" y1="15.37" y2="15.385" gorn="0.65"/>
+   <line id="connector1pin" x1=".0052565" x2=".7718" y1="22.587" y2="22.603" gorn="0.66"/>
+   <line id="connector2pin" x1=".0052565" x2=".7718" y1="29.789" y2="29.805" gorn="0.67"/>
+   <line id="connector3pin" x1=".0052565" x2=".7718" y1="36.961" y2="36.977" gorn="0.68"/>
+   <line id="connector4pin" x1=".0052565" x2=".7718" y1="44.179" y2="44.195" gorn="0.69"/>
+   <line id="connector5pin" x1=".0052565" x2=".7718" y1="51.381" y2="51.396" gorn="0.70"/>
+   <line id="connector6pin" x1=".0052565" x2=".7718" y1="58.584" y2="58.6" gorn="0.71"/>
+   <line id="connector7pin" x1=".0052565" x2=".7718" y1="65.803" y2="65.817" gorn="0.72"/>
+   <line id="connector8pin" x1=".0052565" x2=".7718" y1="73.004" y2="73.021" gorn="0.73"/>
+   <line id="connector9pin" x1=".0052565" x2=".7718" y1="80.177" y2="80.192" gorn="0.74"/>
+   <line id="connector10pin" x1=".0052565" x2=".7718" y1="87.395" y2="87.409" gorn="0.75"/>
+   <line id="connector11pin" x1=".0052565" x2=".7718" y1="94.597" y2="94.612" gorn="0.76"/>
+   <line id="connector12pin" x1=".0052565" x2=".7718" y1="101.87" y2="101.88" gorn="0.77"/>
+   <line id="connector13pin" x1=".0052565" x2=".7718" y1="109.09" y2="109.1" gorn="0.78"/>
+   <line id="connector14pin" x1=".0052565" x2=".7718" y1="116.29" y2="116.31" gorn="0.79"/>
+  </g>
+  <g stroke-width=".35662">
+   <line id="connector42pin" x1="63.944" x2="64.868" y1="15.424" y2="15.44" gorn="0.80"/>
+   <line id="connector41pin" x1="63.944" x2="64.868" y1="22.642" y2="22.658" gorn="0.81"/>
+   <line id="connector40pin" x1="63.944" x2="64.868" y1="29.844" y2="29.86" gorn="0.82"/>
+   <line id="connector39pin" x1="63.944" x2="64.868" y1="37.015" y2="37.03" gorn="0.83"/>
+   <line id="connector38pin" x1="63.944" x2="64.868" y1="44.233" y2="44.248" gorn="0.84"/>
+   <line id="connector37pin" x1="63.944" x2="64.868" y1="51.435" y2="51.451" gorn="0.85"/>
+   <line id="connector36pin" x1="63.944" x2="64.868" y1="58.638" y2="58.654" gorn="0.86"/>
+   <line id="connector35pin" x1="63.944" x2="64.868" y1="65.855" y2="65.871" gorn="0.87"/>
+   <line id="connector34pin" x1="63.944" x2="64.868" y1="73.059" y2="73.073" gorn="0.88"/>
+   <line id="connector33pin" x1="63.944" x2="64.868" y1="80.23" y2="80.244" gorn="0.89"/>
+   <line id="connector19pin" x1="63.944" x2="64.868" y1="87.447" y2="87.464" gorn="0.90"/>
+   <line id="connector18pin" x1="63.944" x2="64.868" y1="94.651" y2="94.665" gorn="0.91"/>
+   <line id="connector17pin" x1="63.944" x2="64.868" y1="101.92" y2="101.94" gorn="0.92"/>
+   <line id="connector16pin" x1="63.944" x2="64.868" y1="109.14" y2="109.16" gorn="0.93"/>
+   <line id="connector15pin" x1="63.944" x2="64.868" y1="116.34" y2="116.36" gorn="0.94"/>
+  </g>
+ </g>
+</svg>
